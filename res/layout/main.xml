@@ -4,9 +4,49 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
+    <TableLayout	android:id="@+id/tableLayout1" 	
+        			android:layout_width="match_parent"
+        			android:layout_height="wrap_content"
+        			android:stretchColumns="1">
+        			
+        <TableRow	android:id="@+id/tableRow1" 	
+            		android:layout_width="match_parent"
+            		android:layout_height="wrap_content">
+            		
+            <EditText 	android:id="@+id/editText1"
+                		android:text="Field1"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content" />
+            <EditText 	android:id="@+id/editText2"
+                		android:text="Field2"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content"
+                		android:layout_column="2" />
+            
+        </TableRow>
+        <View	android:id="@+id/view1" 	
+            	android:layout_width="wrap_content"
+            	android:layout_height="4px"
+            	android:background="#FF0000">            
+        </View>
+        <TableRow	android:id="@+id/tableRow2" 	
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content">
+            
+            <EditText 	android:id="@+id/editText3"
+                		android:text="Field3"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content" />
+            <EditText 	android:id="@+id/editText4"
+                		android:text="Field4"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content" />
+            
+        </TableRow>
+        <Button android:id="@+id/collapse"
+            	android:text="Hide second column"
+            	android:onClick="toggleHiddenRows"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"/>
+    </TableLayout>
 </LinearLayout>
